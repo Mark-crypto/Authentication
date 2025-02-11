@@ -1,0 +1,23 @@
+{
+  "name": "express-session-authentication-starter-master",
+  "version": "1.0.0",
+  "description": "The patterns shown in this repository are meant for educational purposes.  While this is sufficiently secure to use for personal projects, there are considerations not mentioned in this tutorial series that should be explored for an enterprise-grade implementation.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.10.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+  }
+}
