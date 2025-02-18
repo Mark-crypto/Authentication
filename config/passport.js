@@ -24,6 +24,19 @@ const verifyCallback = (username, password, done) => {
   });
 };
 
-const strategy = new LocalStrategy(verifyCallback);
+const strategy = new LocalStrategy(customFields, verifyCallback);
 
 passport.use(strategy);
+
+passport.serializeUser(function (user, done) {
+  done(null, user.id);
+});
+
+passport.deserializeUser(function (user, done) {
+  User.findById(id, function (err, user) {
+    if (err) {
+      return done(err);
+    }
+    done(null, user);
+  });
+});
